@@ -30,14 +30,37 @@ def getNumber():
 
 
 def seperatesecond():
+    everySecond = []
     everySecond = lst[1::2]
     otherValues = lst[::2]
-    print(everySecond)
-    print(otherValues)
-    validate()
+    my_new_list = [i * 2 for i in everySecond]
+    sum_of_digits = sum(my_new_list)
+    sum_of_odd = sum(otherValues)
+    newvalue = (sum_of_digits+sum_of_odd)
+    print(sum_of_digits)
+    print(sum_of_odd)
+    print(newvalue)
+    if newvalue % 10 == 0:
+        print("this is valid")
+    else:
+        print("NOT VALID")
 
-# take every seocn number 1,3,5 then do the same starting from second last then take another variable frm remianed multiples, adders fro every number in the list you multplu it by two
-# check if theyare double digits if they ar then you split then you should have abig list , then you add them all up then add all the adders, then you %done if its 0 then true else not
+    # print(everySecond)
+    # print(otherValues)
+    # return everySecond
+    # return otherValues
+
+
+
+
+
+
+# take every seocn number 1,3,5 then do the same starting from second last then
+# take another variable frm remianed multiples, adders fro every number in the list you multplu it by two
+# check if theyare double digits if they ar then you split then you should have
+#abig list , then you add them all up then add all the adders, then you %done if its 0 then true else not
+
+
 # if number.isdigit():
 #     print("good, these are integers")
 # else:
@@ -45,5 +68,29 @@ def seperatesecond():
 # number = number.split(", ")
 # print(number)
 
+
+# def validate():
+#     doublesecond = for x in everySecond
+# def validate():
+#     creditcard = creditcard[::-1]
+#     creditcard = [int(x) for x in creditcard]
+#     doubleSecondDigit = list()
+#     digits = list(enumerate(creditcard,start=1))
+#     for index, digit in digits:
+#         if index % 2 == 0:
+#             doubleSecondDigit.append(digit*2)
+#         else:
+#             doubleSecondDigit.append(digit)
+#
+#     doubleSecondDigit = [sum_digits(x) for x in doubleSecondDigit]
+#     # sum all digits
+#     sum_of_digits = sum(doubleSecondDigit)
+#     # return True or False
+#     return sum_of_digits % 10 == 0
+#
+# if __name__ == "__main__":
+#     print(validate(getNumber()))
+#
+#
 
 getNumber()
